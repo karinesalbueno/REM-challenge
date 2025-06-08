@@ -4,7 +4,7 @@ import './index.css'
 
 export default function App() {
   return (
-    <div className="container min-h-screen min-w-screen bg-black p-6">
+    <div className="container min-h-screen max-w-screen bg-black p-6">
       <Header />
 
       <main className='mx-auto px-4 md:px-8 py-8 sm:py-10'>
