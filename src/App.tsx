@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/Header';
+import { ItemListPage } from './components/ItemListPage';
+import './index.css'
 
-function App() {
-  const [count, setCount] = useState<number>(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + TypeScript</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="container min-h-screen min-w-screen bg-black p-6">
+      <Header />
 
-export default App
+      <main className='mx-auto px-4 md:px-8 py-8 sm:py-10'>
+        <section className='flex flex-col items-center pb-8'>
+          <h3 className='text-xl font-bold'>
+            Choose Your Skip Size
+          </h3>
+          <p className='py-2 text-center'>
+            Select the skip size that best suits your needs
+          </p>
+        </section>
+
+        <ItemListPage />
+      </main>
+    </div>
+  );
+}
